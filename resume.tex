@@ -1,0 +1,147 @@
+%!TEX TS-program = xelatex
+%!TEX encoding = UTF-8 Unicode
+% Awesome CV LaTeX Template for CV/Resume
+%
+% This template has been downloaded from:
+% https://github.com/posquit0/Awesome-CV
+%
+% Author:
+% Claud D. Park <posquit0.bj@gmail.com>
+% http://www.posquit0.com
+%
+% Template license:
+% CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0/)
+%
+
+
+%-------------------------------------------------------------------------------
+% CONFIGURATIONS
+%-------------------------------------------------------------------------------
+% A4 paper size by default, use 'letterpaper' for US letter
+\documentclass[11pt, a4paper]{awesome-cv}
+
+% Configure page margins with geometry
+\geometry{left=1.4cm, top=.8cm, right=1.4cm, bottom=1.8cm, footskip=.5cm}
+
+% Specify the location of the included fonts
+\fontdir[fonts/]
+
+% Color for highlights
+% Awesome Colors: awesome-emerald, awesome-skyblue, awesome-red, awesome-pink, awesome-orange
+%                 awesome-nephritis, awesome-concrete, awesome-darknight
+\colorlet{awesome}{awesome-red}
+% Uncomment if you would like to specify your own color
+% \definecolor{awesome}{HTML}{CA63A8}
+
+% Colors for text
+% Uncomment if you would like to specify your own color
+% \definecolor{darktext}{HTML}{414141}
+% \definecolor{text}{HTML}{333333}
+% \definecolor{graytext}{HTML}{5D5D5D}
+% \definecolor{lighttext}{HTML}{999999}
+
+% Set false if you don't want to highlight section with awesome color
+\setbool{acvSectionColorHighlight}{true}
+
+% If you would like to change the social information separator from a pipe (|) to something else
+\renewcommand{\acvHeaderSocialSep}{\quad\textbar\quad}
+
+\makeatletter
+\patchcmd{\@sectioncolor}{\color}{\mdseries\color}{}{}
+\makeatother
+
+%-------------------------------------------------------------------------------
+%	PERSONAL INFORMATION
+%	Comment any of the lines below if they are not required
+%-------------------------------------------------------------------------------
+% Available options: circle|rectangle,edge/noedge,left/right
+\name{Bhuvan}{Venkatesh}
+\position{Data Scientist{\enskip\cdotp\enskip}ML Enthusiast}
+
+% \email{bhuvan.venkatesh21@gmail.com}
+% \homepage{bhuvy2.github.io}
+% \github{bhuvy2}
+% \linkedin{bhuvy2}
+% \gitlab{gitlab-id}
+% \stackoverflow{SO-id}{SO-name}
+% \twitter{@twit}
+% \skype{skype-id}
+% \reddit{reddit-id}
+% \extrainfo{extra informations}
+
+
+%-------------------------------------------------------------------------------
+\begin{document}
+
+% Print the header with above personal information
+% Give optional argument to change alignment(C: center, L: left, R: right)
+\makecvheader[C]
+\vspace{-20pt}
+\begin{minipage}[t]{0.75\textwidth}
+\raggedright
+\input{resume/education.tex}
+\input{resume/experience.tex}
+%\input{resume/honors.tex}
+\input{resume/writing.tex}
+\end{minipage}\quad
+\begin{minipage}[t]{0.2\textwidth}
+\raggedright
+\cvsection{Skills}
+
+\medskip
+\cvsubsection{Languages}
+
+Python, C/C++, R, Ruby, Javascript
+
+\bigskip
+\cvsubsection{Technologies}
+
+Linux, Spark, Cassandra, Hadoop
+
+\bigskip
+\cvsubsection{Specializations}
+
+Scalable Machine Learning,
+Cloud Systems,
+Distributed Systems
+
+\cvsection{Awards}
+
+\bigskip
+
+\cvsubsection{\textbf{Top 10\% of Teaching Assistants}}
+
+As Ranked by Students
+
+\medskip
+
+\cvsubsection{\textbf{Deans List}}
+
+Fall 2017 and Spring 2018
+
+\cvsection{Work}
+
+\bigskip
+{
+\Large
+\href{https://github.com/bhuvy2}{\faGithubSquare\acvHeaderIconSep bhuvy2}
+
+\medskip
+
+\href{https://linkedin.com/in/bhuvy2}{\faLinkedinSquare\acvHeaderIconSep bhuvy2}
+
+\medskip
+
+\href{https://bhuvy.com}{\faHome\acvHeaderIconSep bhuvy.com}
+}
+
+\end{minipage}%
+
+\makecvfooter
+  {}
+  {{\Large \href{mailto:bhuvan.venkatesh21@gmail.com}{\faEnvelope\acvHeaderIconSep bhuvan.venkatesh21@gmail.com}  } }
+  {}
+
+
+%-------------------------------------------------------------------------------
+\end{document}

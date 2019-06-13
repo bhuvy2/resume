@@ -26,6 +26,13 @@
 % Specify the location of the included fonts
 \fontdir[fonts/]
 
+% Color for highlights
+% Awesome Colors: awesome-emerald, awesome-skyblue, awesome-red, awesome-pink, awesome-orange
+%                 awesome-nephritis, awesome-concrete, awesome-darknight
+\colorlet{awesome}{awesome-red}
+% Uncomment if you would like to specify your own color
+% \definecolor{awesome}{HTML}{CA63A8}
+
 % Colors for text
 % Uncomment if you would like to specify your own color
 % \definecolor{darktext}{HTML}{414141}
@@ -39,22 +46,22 @@
 % If you would like to change the social information separator from a pipe (|) to something else
 \renewcommand{\acvHeaderSocialSep}{\quad\textbar\quad}
 
+\makeatletter
+\patchcmd{\@sectioncolor}{\color}{\mdseries\color}{}{}
+\makeatother
 
 %-------------------------------------------------------------------------------
 %	PERSONAL INFORMATION
 %	Comment any of the lines below if they are not required
 %-------------------------------------------------------------------------------
 % Available options: circle|rectangle,edge/noedge,left/right
-% \photo{profile.png}
-\name{Claud D.}{Park}
-\position{Software Engineer{\enskip\cdotp\enskip}Security Expert}
-\address{246-1002, Gwangmyeongmayrouge Apt. 86, Cheongna lime-ro, Seo-gu, Incheon-si, 404-180, Rep. of KOREA}
+\name{Bhuvan}{Venkatesh}
+\position{Data Scientist{\enskip\cdotp\enskip}ML Enthusiast}
 
-\mobile{(+82) 10-9030-1843}
-\email{posquit0.bj@gmail.com}
-\homepage{www.posquit0.com}
-\github{posquit0}
-\linkedin{posquit0}
+\email{bhuvan.venkatesh21@gmail.com}
+\homepage{bhuvy.com}
+\github{bhuvy2}
+\linkedin{bhuvy2}
 % \gitlab{gitlab-id}
 % \stackoverflow{SO-id}{SO-name}
 % \twitter{@twit}
@@ -66,30 +73,19 @@
 %-------------------------------------------------------------------------------
 \begin{document}
 
-% Print the header with above personal informations
+% Print the header with above personal information
 % Give optional argument to change alignment(C: center, L: left, R: right)
-\makecvheader
-
-% Print the footer with 3 arguments(<left>, <center>, <right>)
-% Leave any of these blank if they are not needed
-\makecvfooter
-  {\today}
-  {Bhuvan Venkatesh~~~·~~~Curriculum Vitae}
-  {\thepage}
-
-
-%-------------------------------------------------------------------------------
-%	CV/RESUME CONTENT
-%	Each section is imported separately, open each file in turn to modify content
-%-------------------------------------------------------------------------------
+\makecvheader[C]
 \input{cv/education.tex}
 \input{cv/skills.tex}
 \input{cv/experience.tex}
-\input{cv/extracurricular.tex}
 \input{cv/honors.tex}
-\input{cv/presentation.tex}
 \input{cv/writing.tex}
-\input{cv/committees.tex}
+
+\makecvfooter
+  {\today}
+  {Bhuvan Venkatesh~~~~~~~~Curriculum Vitae}
+  {\thepage}
 
 
 %-------------------------------------------------------------------------------
